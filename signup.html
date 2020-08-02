@@ -1,45 +1,54 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SignUp Page</title>
-</head>
-<body>
-<br>
-<form action="./login.html" method="post" align="center">
-    <table >
-    <tr>
-     <td> <label for="name"><b>FULL NAME:</b></label></td>
-      <td><input type="text" placeholder="Last Middle First" name="name" required><br><br></td>
-    </tr>
-    <tr> 
-      <td><label for="email"><b>EMAIL_ID:<b/></label></t d>
-      <td><input type="text" placeholder=" Email Address"name="email" required><br><br></td>
-    </tr>
-    <tr> 
-      <td><label for="phn"><b>Phone Number:</b></label></td>
-      <td><input type="text" placeholder="phone number" name="phn" required><br><br></td>
-    </tr>
-    <tr>
-      <td><label for="addrs"><b>ADDRESS:</b></label></td>
-      <td><textarea id="w3review"  name="addrs" rows="4" cols="50"></textarea></td>
-      <br><br>
-    </tr>
-    <tr>
-        <td>
-      <button type="submit">REGISTER</button><br>
-    </td>
-    </tr>
-    <tr>
-        <td>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me |
-      </label>
-        <a href="#">Forgot password?</a></span>
-    </td>
-    </tr>
-    </table>
-  </form>
-</body>
+
+<html>
+
+    <head>
+        <title>Signup Page</title>
+        <link rel="stylesheet" href="css/loginGUI.css" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+	<style>
+	body{
+		background-image:url();
+	}
+	</style>
+    <body style="background-image: url(img/footer.jpg); ">
+        
+       <div >
+            <form class="modal-content animate"  method="POST" style="border: 7px solid black;">
+			
+                <div class="imgcontainer">
+                    <img src="img/login.png"  alt="Avatar" class="avatar">
+                </div>
+                <center><h3 style="align-self:center;">INTRODUCE YOURSELF</h3></center>
+                <div class="container">
+                    <label for="uname"><b> Your Name  </b></label>
+                    <input type="text" placeholder="Your good name " name="uname" required>
+
+                    <label for="psw"><b> Password </b></label>
+                    <input type="password" placeholder="At least 6 characters" name="psw" required>
+					
+					<label for="email"><b>You can contact me via below Email :</b></label>
+                    <input type="text" placeholder="Enter Email" name="email" required>
+					
+					<label for="contact"><b>Contact No</b></label>
+                    <input type="text" placeholder="10 digit Mobile no." name="contact" required>
+                    
+                    <label for="contact"><b>Prefer Your currency  </b></label>
+                    <br><br>
+
+                    <select class="modernized" name="user[default_currency]" id="user_default_currency"><option selected="selected" value="INR">INR (₹)</option>
+                        <option value="INR">INR (Rs. )</option>
+                        <option value="USA">USD ($)</option>
+                    </select>
+                    <br><br>
+                    <center>
+                        <div class="container" style="background-color:#f1f1f1"> 
+                        <button type="submit" name="submit" class="cancelbtn">SIGN UP</button>       
+                    </center>
+                </form>	
+       </div>
+    </body>
 </html>
