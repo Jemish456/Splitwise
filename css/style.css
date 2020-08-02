@@ -12,7 +12,7 @@
     text-decoration: double;
     text-shadow: 8px 8px 8px rgb(255, 255, 255), 0 0 25px rgb(255, 255, 255), 0 0 5px rgb(255, 255, 255);
     border-style: solid;
-    background-image: url(../img/footer.jpg);
+    background-image: url(../img/bkimage.jpg);
     opacity: .4;   
 }
 .border
@@ -21,7 +21,7 @@
 }
 body
 {
-    background-image: url(../img/footer.jpg);
+    background-image: url(../img/bkimage.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -100,6 +100,6 @@ input[type=text],input[type=password],input[type=number]
     text-decoration: double;
     text-shadow: 8px 8px 8px black, 0 0 25px rgb(196, 164, 164), 0 0 5px rgb(199, 163, 163);
     border-style: solid;
-    background-image: url(../img/footer.jpg);
+    background-image: url(../img/bkimage.jpg);
     opacity: .4;   
 }
