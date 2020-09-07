@@ -1,124 +1,176 @@
-<!DOCTYPE html>
 <html>
 <head>
-<style>
-* {
-  box-sizing: border-box;
-}
 
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-}
+    <title>Add Expense</title>
+                <!--for tab bar groups friends activities-->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+                
+                <!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
+                <link rel="stylesheet" type="text/css" href="css/boostrap.css">
 
-label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
-}
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
 
-input[type=submit] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  float: right;
-}
 
-input[type=submit]:hover {
-  background-color: #45a049;
-}
+                
+            
 
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-}
+                <!-- for navbar purose-->
+                <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">-->
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+                
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+          
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-.col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
-}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-.col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
-}
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
 
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .col-25, .col-75, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
-}
-</style>
+
+
 </head>
-<body style="background-image: url(img/canvas.png); ">
+<body style="background-color: #e3e8e9;">
+        
 
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark" >
+                <a class="navbar-brand" href="#" style="padding-left:15px;">
+                 
+                </a> <h3 style="color: white;">SPLIWISE</h3>
+               <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navb">
+                  <ul class="navbar-nav mr-auto">
+                    
+                  </ul>
+                  
+                  <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                    <button class="btn btn-success my-2 my-sm-0" type="button"><i class='fa fa-search' aria-hidden='true'></i></button>
+                  </form>
+                </div>
+            </nav> 
+              <!-- niche wala( blue ) header starts -->
+              
+              
+            <nav class="navbar navbar-expand-sm bg-info navbar-dark justify-content-center sticky-top" >
+                
+               <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse justify-content-center" id="navb">
+                  <ul class="navbar-nav ">
+                 
+                  <li class="nav-item" style="padding-left:35px;">
+                    <a class="nav-link" href="#"><b>ABOUT</b></a>
+                  </li>
+    
+                  <li class="nav-item" style="padding-left:35px;">
+                    <a class="nav-link" href="#"><b>CONTACT</b></a>
+                  </li>
+                  </ul>
+                  
+                  
+                </div>
+                <form class="form-inline my-2 my-lg-0">
+                    
+                    <button class="btn btn-dark my-2 my-sm-0" style="margin-right:3px;" type="button"><i class="fa fa-user" aria-hidden="true"></i> LOGIN</button>
+                  </form>
+                  
+            </nav>
+             
 
+<div class="container" style="margin-bottom:50px ;margin-top:50px ;background-color: white; border-bottom: 4px solid black;">
 
+        <div class="jumbotron" style="font-family:Georgia, 'Times New Roman', Times, serif; border-top:5px solid white">
+                <b><h2>ADD EXPENSE</h2> 
+                <p>
+                    Easily add and manage the expenses made by you or any other member of your group! 
+                </p>
+            </div>
+            
 
-<div class="container">
-  <form >
-    <center><h2>Add Your Expence Here!</h2></center><br><br>
-  <div class="row">
-    <div class="col-25">
-      <label for="fname">Paid By</label>
-    </div>
-    <div class="col-75">
-      <select id="paid" name="pname">
-        <option value="John">JOHN</option>
-        <option value="rock">ROCK</option>
-        <option value="jemis">JEMIS</option>
+<form>
+  <div class="form-group row">
+    <label class="col-4 col-form-label" for="payer" style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 18px;">Paid By</label> 
+    <div class="col-8">
+      <select id="payer" name="payer" required="required" class="custom-select">
+        <option value="0">Choose the payer</option>
+        <option value="john">john</option>
+        <option value="mark">mark</option>
+        <option value="david">david</option>
       </select>
     </div>
   </div>
-  <div class="row">
-    <div class="col-25">
-      <label for="HowMuch">How Much?</label>
+  <div class="form-group row">
+    <label for="amount" class="col-4 col-form-label" style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 18px;">How Much ?</label> 
+    <div class="col-8">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <i class="fa fa-rupee"></i>
+          </div>
+        </div> 
+        <input id="amount" name="amount" placeholder="Amount Paid" type="text" required="required" class="form-control"> 
+        <div class="input-group-append">
+          <div class="input-group-text">.00</div>
+        </div>
+      </div>
     </div>
-    <div class="col-75">
-      <input type="text" id="for"  placeholder="Amount Paid">
+  </div>
+  <div 
+
+  
+
+
+  <div class="form-group row">
+    <label for="desc" class="col-4 col-form-label" style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 18px;">What For ?</label> 
+    <div class="col-8">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <i class="fa fa-sticky-note"></i>
+          </div>
+        </div> 
+        <input id="desc" name="desc" placeholder="Description about the expense " type="text" class="form-control" required="required">
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="doe" class="col-4 col-form-label" style="font-family: Georgia, 'Times New Roman', Times, serif; font-size: 18px;">When ?</label> 
+    <div class="col-8">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <i class="fa fa-calendar-times-o"></i>
+          </div>
+        </div> 
+        <input id="doe" name="doe" placeholder="Date of expenditure" type="date" class="form-control"> 
+        <div class="input-group-append">
+          <div class="input-group-text">DD/MM/YYYY</div>
+        </div>
+      </div>
     </div>
   </div>
   
-  <div class="row">
-    <div class="col-25">
-      <label for="subject">Whats For???</label>
-    </div>
-    <div class="col-75">
-      <textarea id="subject" name="subject" placeholder="Description About the Expense" style="height:200px"></textarea>
-    </div>
-  </div>
+  
 
-  <div class="row">
-    <div class="col-25">
-      <label for="When">When?</label>
-    </div>
-    <div class="col-75">
-      <input type="date" id="for"  placeholder="When">
+  <div class="form-group row">
+    <div class="offset-4 col-8">
+      <button name="submit" type="submit" class="btn btn-primary" >Add Expense</button>
     </div>
   </div>
-
-  <div class="row">
-    <input type="submit" value="Add Expense">
-  </div>
-  </form>
+</form>
 </div>
+ 
+
 
 </body>
 </html>
